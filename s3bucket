@@ -1,0 +1,2 @@
+ aws s3 mb s3://dfghjkloplokijuhytredfkhgf --region us-east-1
+for creating s3 bucket in different region
