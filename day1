@@ -40,3 +40,11 @@ to see list of users have access to a repo:
    14  ./list-users.sh akashpractice12 practice
    15  history
 
+
+jenkins:
+
+ps -ef | grep jenkins
+
+for restarting jenkins you can do http:publicip:8080/restart
+for docker as agent you will install docker pipeline plugin
+here jenkins will rquest docker to create containg for build purpose as soon build is done it will delete it
