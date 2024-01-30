@@ -1,0 +1,26 @@
+
+#! /bin/bash
+set -x
+set -e
+set -o pipefail
+#list of s3 buckets
+echo "list of s3 buckets"
+aws s3 ls
+
+#list of ec2 instances
+echo "list of instances"
+aws ec2 describe-instances
+
+#list of lamda functions
+aws lambda list-functions
+
+#list of IAM users
+echo "list of users in IAM"
+
+aws iam list-users
+
+echo "printing instance ids"
+aws ec2 describe-instances | jq '.Reservations[].Instances[].InstanceId'
+
+
+
