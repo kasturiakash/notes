@@ -48,3 +48,5 @@ ps -ef | grep jenkins
 for restarting jenkins you can do http:publicip:8080/restart
 for docker as agent you will install docker pipeline plugin
 here jenkins will rquest docker to create containg for build purpose as soon build is done it will delete it
+
+AWS CLI is a tool used to connect aws with your personal vm or any machine . AWS helps to interact withAWS api's
