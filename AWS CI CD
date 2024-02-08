@@ -1,0 +1,8 @@
+
+github service =  AWS code commit service in AWS
+jenkins pipeline = AWS codepipeline
+for builging app like maven = AWS Code build 
+instead of argocd or shell script = AWS code deploy
+
+AWS code commit:
+*managed service
