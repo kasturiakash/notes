@@ -6,3 +6,9 @@ instead of argocd or shell script = AWS code deploy
 
 AWS code commit:
 *managed service
+managed git
+scalability
+Reliability
+(genrally  you will not use public or open source repo  )
+(you dont have to enable code guru)
+it will not work well with root account you cannot use like ssh so we use IAM user a
