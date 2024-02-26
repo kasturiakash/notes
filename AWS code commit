@@ -11,4 +11,5 @@ scalability
 Reliability
 (genrally  you will not use public or open source repo  )
 (you dont have to enable code guru)
-it will not work well with root account you cannot use like ssh so we use IAM user a
+it will not work well with root account you cannot use like ssh so we use IAM user give AWS code commit power user access (we use https url for cli purpose)
+the disadvantage is it has very less features
