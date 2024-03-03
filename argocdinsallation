@@ -1,3 +1,8 @@
+
+
+
+
+
 for minikube:
 kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
@@ -14,3 +19,11 @@ kubectl get svc -n argocd
  Get pasword and decode it.
   kubectl get secret argocd-initial-admin-secret -n argocd -o yaml
   echo <secret> | base64 --decode
+
+
+argocd is gitops tool . it follows git as single source of truth.
+we don't have to provide Kubernetes credentials and we dont have to install kubectl plugin or aws cli plugin if it we use EKS cluster.
+we install argocd directly in our cluster and we have seperate git remote repo where we store deployment.yml and service.yml or helmchart by these repo it will deploy app automatically.
+if there are any changes in that repo then it will automatically deploy the changes and even if we manually if we make changes inside the cluster then it will check the repo and automatically make the changes in deployment.
+
+generally during creation of that repo we will change the settings which is no direct commit allowed in master branch if any body works in feature branch and wants to do commit or merge into master branch they need to do pull request changes will not be merged into master branch unless the architect approves these way access control works here
