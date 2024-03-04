@@ -13,4 +13,6 @@ reconciliation:  when ever pull happens it takes of maintaining the desired stat
 suspend: it can suspend pull or reconciliation 
 resume : to resume if we used suspend
 prune: if developer manually done changes in cluster then in next reconciliation the changes done will be deleted automatically 
-these 
+these above 4 are commands
+
+before installation of fluxcd we need a git repo and PAT token (personal access token)
