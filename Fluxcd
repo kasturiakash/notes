@@ -33,3 +33,10 @@ flux create source git k8snginxappsot --url=https://github.com/kasturiakash/k8s_
 kubectl apply -f ./flux_source.yaml
 kubectl apply -f ./flux_sync.yaml
 kubectl get pods -o wide
+
+
+
+
+sealed secret: in gitops we declared manifest files in the repo but like that if you want to provision set of passwords then we cannot store it in repo in plain text or base64 format because it is easily decoded 
+one of the solution is using bitnami .
+previously during bootstrap those controllers took care of everything thing like that we install the controller from bitnami after we install the controller we use client side tool which is kubeseal cli to generate sealed secret and store these secret in gitrepo when gitops tool pull the secret this controller will decode the sealed  secret we stored in repo
