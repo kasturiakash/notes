@@ -1,0 +1,16 @@
+fluxcd is gitops tool like argocd but it doesn't have UI.
+
+fluxcli is client side tool used to interact with flux gitopa agent
+
+when we bootstrap it creates namespace flux-system inside it it will create and run controllers
+
+source controller: we define source of deployment like git repo( define SOT(source of truth)).
+kustomize controller: lets say in our SOT we define or declare our manifest files using kustomization approach it is responsibility of kustomization controller to apply kustomisation on the environment
+helm controller: if we define our manifest files using helm charts then it is responsibility of helm controller to apply helm charts on cluster env
+notification controller: it notifies us  the state of deployment process it can notify to SOT repo,teams,slack
+these controllers installed in boot strap process.
+reconciliation:  when ever pull happens it takes of maintaining the desired state on cluster means when ever pull happens it compares desired state with current state of there is changes then it will apply on cluster.
+suspend: it can suspend pull or reconciliation 
+resume : to resume if we used suspend
+prune: if developer manually done changes in cluster then in next reconciliation the changes done will be deleted automatically 
+these 
