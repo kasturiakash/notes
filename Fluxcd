@@ -15,4 +15,5 @@ resume : to resume if we used suspend
 prune: if developer manually done changes in cluster then in next reconciliation the changes done will be deleted automatically 
 these above 4 are commands
 
-before installation of fluxcd we need a git repo and PAT token (personal access token)
+before installation of fluxcd we need a git repo and PAT token (personal access token) so this token is used by fluxcd agent to talk to github repo we need a gitrepo to store infrastucture related code All the code related to flux cd components Will be stored in this repo.
+
