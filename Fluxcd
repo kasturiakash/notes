@@ -18,6 +18,8 @@ these above 4 are commands
 before installation of fluxcd we need a git repo and PAT token (personal access token) so this token is used by fluxcd agent to talk to github repo we need a gitrepo to store infrastucture related code All the code related to flux cd components Will be stored in this repo.
 
 steps:
+export GITHUB_USER=kasturiakash
+export GITHUB_TOKEN=""
 curl -s https://fluxcd.io/install.sh | sudo bash
 flux bootstrap github --owner=$GITHUB_USER --repository=fluxcdInfraSOT --branch=main --path=deployinfra --personal 
 (if you have these repo name "fluxcdInfraSOT" or give any repo name)  (--path=deployinfra inside repo it will create these folder you can give any folder name and it will create config files inside it)
