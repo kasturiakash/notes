@@ -1,3 +1,53 @@
+𝗪𝗵𝗮𝘁 𝗶𝘀 𝗞𝘂𝗯𝗲𝗿𝗻𝗲𝘁𝗲𝘀 𝗜𝗻𝗴𝗿𝗲𝘀𝘀?
+Kubernetes Ingress is a resource that allows you to expose your services to the outside world while providing essential features like load balancing, SSL termination, and URL-based routing. It acts as a gateway for external traffic into your cluster.
+
+𝗞𝗲𝘆 𝗙𝗲𝗮𝘁𝘂𝗿𝗲𝘀 🌟:
+𝗣𝗮𝘁𝗵-𝗕𝗮𝘀𝗲𝗱 𝗥𝗼𝘂𝘁𝗶𝗻𝗴: Ingress allows you to route traffic based on URL paths to different services within your cluster.
+
+𝗧𝗟𝗦 𝗧𝗲𝗿𝗺𝗶𝗻𝗮𝘁𝗶𝗼𝗻: Secure your connections by terminating SSL/TLS at the Ingress controller.
+
+𝗟𝗼𝗮𝗱 𝗕𝗮𝗹𝗮𝗻𝗰𝗶𝗻𝗴: Distribute incoming traffic across multiple pods to ensure optimal performance.
+
+𝗟𝗲𝘁'𝘀 𝗗𝗶𝘃𝗲 𝗶𝗻𝘁𝗼 𝗮𝗻 𝗘𝘅𝗮𝗺𝗽𝗹𝗲 𝗬𝗔𝗠𝗟 𝗖𝗼𝗻𝗳𝗶𝗴𝘂𝗿𝗮𝘁𝗶𝗼𝗻:
+
+𝙖𝙥𝙞𝙑𝙚𝙧𝙨𝙞𝙤𝙣: 𝙣𝙚𝙩𝙬𝙤𝙧𝙠𝙞𝙣𝙜.𝙠8𝙨.𝙞𝙤/𝙫1
+𝙠𝙞𝙣𝙙: 𝙄𝙣𝙜𝙧𝙚𝙨𝙨
+𝙢𝙚𝙩𝙖𝙙𝙖𝙩𝙖:
+ 𝙣𝙖𝙢𝙚: 𝙚𝙭𝙖𝙢𝙥𝙡𝙚-𝙞𝙣𝙜𝙧𝙚𝙨𝙨
+𝙨𝙥𝙚𝙘:
+ 𝙧𝙪𝙡𝙚𝙨:
+ - 𝙝𝙤𝙨𝙩: 𝙢𝙮𝙙𝙤𝙢𝙖𝙞𝙣.𝙘𝙤𝙢
+ 𝙝𝙩𝙩𝙥:
+ 𝙥𝙖𝙩𝙝𝙨:
+ - 𝙥𝙖𝙩𝙝: /𝙖𝙥𝙥
+ 𝙥𝙖𝙩𝙝𝙏𝙮𝙥𝙚: 𝙋𝙧𝙚𝙛𝙞𝙭
+ 𝙗𝙖𝙘𝙠𝙚𝙣𝙙:
+ 𝙨𝙚𝙧𝙫𝙞𝙘𝙚:
+ 𝙣𝙖𝙢𝙚: 𝙖𝙥𝙥-𝙨𝙚𝙧𝙫𝙞𝙘𝙚
+ 𝙥𝙤𝙧𝙩:
+ 𝙣𝙪𝙢𝙗𝙚𝙧: 80
+ - 𝙥𝙖𝙩𝙝: /𝙖𝙥𝙞
+ 𝙥𝙖𝙩𝙝𝙏𝙮𝙥𝙚: 𝙋𝙧𝙚𝙛𝙞𝙭
+ 𝙗𝙖𝙘𝙠𝙚𝙣𝙙:
+ 𝙨𝙚𝙧𝙫𝙞𝙘𝙚:
+ 𝙣𝙖𝙢𝙚: 𝙖𝙥𝙞-𝙨𝙚𝙧𝙫𝙞𝙘𝙚
+ 𝙥𝙤𝙧𝙩:
+ 𝙣𝙪𝙢𝙗𝙚𝙧: 8080
+ 𝙩𝙡𝙨:
+ - 𝙝𝙤𝙨𝙩𝙨:
+ - 𝙢𝙮𝙙𝙤𝙢𝙖𝙞𝙣.𝙘𝙤𝙢
+ 𝙨𝙚𝙘𝙧𝙚𝙩𝙉𝙖𝙢𝙚: 𝙩𝙡𝙨-𝙨𝙚𝙘𝙧𝙚𝙩
+
+In this example:
+We define rules for two paths (/app and /api).
+Requests to /app are directed to the app-service on port 80.
+Requests to /api are directed to the api-service on port 8080.
+TLS is enabled using a secret named tls-secret for the domain mydomain. com.
+
+𝗛𝗼𝘄 𝘁𝗼 𝗔𝗽𝗽𝗹𝘆 𝘁𝗵𝗲 𝗖𝗼𝗻𝗳𝗶𝗴𝘂𝗿𝗮𝘁𝗶𝗼𝗻?
+Save the YAML to a file (e.g., my-ingress.yaml) and apply it to your cluster:
+kubectl apply -f my-ingress.yaml 
+
 Ingress is a powerful tool for managing external access to services in your cluster, and here's a step-by-step guide on how I accomplished it:
 
 𝟭. 𝗦𝗲𝗿𝘃𝗶𝗰𝗲 𝗔𝗰𝗰𝗼𝘂𝗻𝘁 𝗦𝗲𝘁𝘂𝗽:
