@@ -8,3 +8,18 @@ helm pull bitnami/nginx --untar
 ll
 helm install my-nginx bitnami/nginx
 (my-nginx or you can give any name_
+
+some charts you dont get  loadbalancer service by default like grafana installation
+helm pull bitnami/grafana --untar
+vi values.yml
+service:
+  type: LoadBalancer
+
+paste these in values.yml and run
+helm install my-grafana bitnami/grafana -f values.yml
+you will get loadbalancer type service
+
+some charts if you install they will be in tar format you can untar it like jenkins
+helm pull bitnami/jenkins
+tar -zxvf jenkins-12.10.1.tgz
+helm install jen bitnami/jenkins
