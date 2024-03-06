@@ -4,7 +4,7 @@ it also helps us to deploy app in easier way like we have template of apps that 
 snap install helm --classic
 helm repo add bitnami https://charts.bitnami.com/bitnami
 helm search repo
-helm pull bitnami/nginx untar==true
+helm pull bitnami/nginx --untar
 ll
 helm install my-nginx bitnami/nginx
 (my-nginx or you can give any name_
