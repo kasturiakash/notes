@@ -1,0 +1,4 @@
+we know grafana is visualisation tool
+Prometheus is data source tool which is time series data source means it will fetch data in certain intervals of time if we set 5min interval then for every 5min it will fetch the data.
+loki is log aggregation data source it will fetch the logs of the app and logs can be analysed by grafana
+influxdb is like Prometheus but better version of Prometheus . between both of them choose influxdb
