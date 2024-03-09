@@ -1,0 +1,3 @@
+cherry pick is used to merge the changes from one branch to other using commitid but limitation is it is easy when there are one or two commits of there are 1000 of commits then it is very difficult for always copying commit id and doing cherrypick manally each time.
+
+
