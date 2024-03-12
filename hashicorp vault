@@ -1,0 +1,5 @@
+vault concepts:
+
+secret engines: like different types of secrets you can create in hashicorp vault lets say you want to store TLS based k8s secret then you can use Kubernetes secret engine to configure you will provide k8s cluster details and integrate with your k8s cluster 
+if you want to Store normal key value pair like username and password then you can use KV secret engine 
+for creating roles you can't use UI you have to use CLI
