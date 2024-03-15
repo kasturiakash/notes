@@ -50,3 +50,8 @@ for docker as agent you will install docker pipeline plugin
 here jenkins will rquest docker to create containg for build purpose as soon build is done it will delete it
 
 AWS CLI is a tool used to connect aws with your personal vm or any machine . AWS helps to interact withAWS api's
+kubeaudit we can use to scan k8s cluster
+* monitoring is done in two ways:
+for website level monitoring we use blackbox exporter to find out how is traffic in the website is up or not.
+systemlevel monitoring is basically to findout how much CPU or RAM is utilized by nodeexporter
+
